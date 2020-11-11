@@ -8,7 +8,8 @@
     "start": "webpack serve --hot",
     "build": "webpack",
     "storybook": "start-storybook -p 6006 --no-dll",
-    "build-storybook": "build-storybook --no-dll"
+    "build-storybook": "build-storybook --no-dll",
+    "chromatic": "npx chromatic --project-token CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes"
   },
   "dependencies": {
     "react": "^17.0.1",
@@ -23,6 +24,7 @@
     "@storybook/addon-links": "^6.0.28",
     "@storybook/react": "^6.0.28",
     "babel-loader": "^8.2.1",
+    "chromatic": "^5.3.0",
     "react-hot-loader": "^4.13.0",
     "react-is": "^17.0.1",
     "webpack": "^5.4.0",
