@@ -132,7 +132,7 @@ exports[`Storyshots Example/Header Logged Out 1`] = `
         Log in
       </button>
       <button
-        className="storybook-button storybook-button--small storybook-button--primary"
+        className="storybook-button storybook-button--large storybook-button--primary"
         onClick={[Function]}
         style={null}
         type="button"
@@ -320,7 +320,7 @@ exports[`Storyshots Example/Page Logged Out 1`] = `
           Log in
         </button>
         <button
-          className="storybook-button storybook-button--small storybook-button--primary"
+          className="storybook-button storybook-button--large storybook-button--primary"
           onClick={[Function]}
           style={null}
           type="button"
