@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "test": "jest",
     "clean": "rm dist/main.js",
     "start": "webpack serve --hot",
     "build": "webpack",
@@ -22,13 +23,29 @@
     "@storybook/addon-actions": "^6.0.28",
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/addon-links": "^6.0.28",
+    "@storybook/addon-storyshots": "^6.0.28",
     "@storybook/react": "^6.0.28",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.2",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.1",
     "chromatic": "^5.3.0",
+    "jest": "^26.6.3",
     "react-hot-loader": "^4.13.0",
     "react-is": "^17.0.1",
+    "react-test-renderer": "^17.0.1",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[tj]sx?$": "babel-jest" ,
+      "^.+\\.mdx$": "@storybook/addon-docs/jest-transform-mdx"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }

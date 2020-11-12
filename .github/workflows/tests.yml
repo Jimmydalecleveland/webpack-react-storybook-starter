@@ -1,0 +1,14 @@
+name: Tests
+
+on: pull_request
+
+jobs:
+  test:
+    name: 'Run Jest'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Required to retrieve git history
+      - run: yarn
+      - run: yarn test
