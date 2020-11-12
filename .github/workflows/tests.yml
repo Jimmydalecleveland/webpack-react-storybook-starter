@@ -1,0 +1,10 @@
+name: Tests
+
+on: pull-request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: yarn
+      - run: yarn test
