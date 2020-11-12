@@ -4,7 +4,7 @@ on: pull_request
 
 jobs:
   test:
-    name: 'Run Jest'
+    name: 'Jest'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -12,3 +12,15 @@ jobs:
           fetch-depth: 0 # Required to retrieve git history
       - run: yarn
       - run: yarn test
+  chromatic:
+    name: 'Chromatic Visual Regression Tests'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Required to retrieve git history
+      - run: yarn
+      - uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }} 
